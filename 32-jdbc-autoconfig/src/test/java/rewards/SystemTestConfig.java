@@ -24,7 +24,7 @@ public class SystemTestConfig {
 	// - Comment out the @Bean method below so this method
 	//   is no longer called
 
-	@Bean
+	/*@Bean
 	public DataSource dataSource() {
 		logger.debug("Creating the datasource bean explicitly");
 
@@ -33,6 +33,6 @@ public class SystemTestConfig {
 			.addScript("classpath:rewards/testdb/schema.sql")
 			.addScript("classpath:rewards/testdb/data.sql")
 			.build();
-	}
+	}*/
 	
 }

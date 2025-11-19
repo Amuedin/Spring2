@@ -29,7 +29,7 @@ subprojects {
     repositories {
         mavenCentral()
     }
-
+  
     dependencyManagement {
         imports {
             mavenBom("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
@@ -42,7 +42,7 @@ subprojects {
         implementation "org.springframework.boot:spring-boot-starter"
         implementation "org.springframework.boot:spring-boot-starter-jdbc"
         implementation "org.hsqldb:hsqldb"
-
+        implementation "com.oracle.database.jdbc:ojdbc8:19.8.0.0"
         testImplementation "org.springframework.boot:spring-boot-starter-test"
     }
 

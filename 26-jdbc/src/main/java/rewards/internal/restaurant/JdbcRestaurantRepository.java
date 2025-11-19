@@ -1,7 +1,7 @@
 package rewards.internal.restaurant;
 
 import common.money.Percentage;
-import io.micrometer.core.lang.NonNull;
+//import io.micrometer.core.lang.NonNull;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -45,12 +45,12 @@ import java.sql.SQLException;
 
 public class JdbcRestaurantRepository implements RestaurantRepository {
 
-	private DataSource dataSource;
+	//private DataSource dataSource;
 
 	private JdbcTemplate jdbcTemplate;
 
 	public JdbcRestaurantRepository(JdbcTemplate jdbcTemplate) {
-		this.dataSource = dataSource;
+		//this.dataSource = dataSource;
 		this.jdbcTemplate = jdbcTemplate;
 	}
 

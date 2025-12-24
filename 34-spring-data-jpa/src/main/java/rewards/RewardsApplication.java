@@ -32,7 +32,7 @@ public class RewardsApplication {
 	@Component
 	public final class QueryAccountCountRunner implements CommandLineRunner {
 
-		private JdbcTemplate jdbcTemplate;
+		private final JdbcTemplate jdbcTemplate;
 
 		public QueryAccountCountRunner(JdbcTemplate jdbcTemplate) {
 			this.jdbcTemplate = jdbcTemplate;

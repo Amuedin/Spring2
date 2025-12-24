@@ -35,13 +35,16 @@ public class Account {
 	private Long entityId;
 
 	// No need for @Column, mapped automatically to NUMBER
+    //Ya que el nombre de la columna coincide con el de la propiedad no necesitamos mapearlo con
+    //la anotación @Column
 	private String number;
 
 	// No need for @Column, mapped automatically to NAME
 	private String name;
 
-	@OneToMany
-	@JoinColumn(name = "ACCOUNT_ID")
+	@OneToMany//Un ACCOUNT tiene muchos BENEFICIARIES, se coloca en la entidad que es el lado uno
+	@JoinColumn(name = "ACCOUNT_ID")//Aqui indicamos que la tabla BENEFICIARY tendrá una columna con las claves foraneas
+    // que apuntan a ACCOUNT(ID)
 	private Set<Beneficiary> beneficiaries = new HashSet<Beneficiary>();
 
 	@Column(name = "CREDIT_CARD")
@@ -73,7 +76,7 @@ public class Account {
 	/**
 	 * Setter for the credit card number for this account.
 	 * 
-	 * @param creditCardNumber
+	 * @param creditCardNumber credit card number
 	 */
 	public void setCreditCardNumber(String creditCardNumber) {
 		this.creditCardNumber = creditCardNumber;

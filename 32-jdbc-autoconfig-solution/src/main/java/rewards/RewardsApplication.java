@@ -14,7 +14,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootApplication
 @EnableConfigurationProperties(RewardsRecipientProperties.class)
 //@ConfigurationPropertiesScan
-@Import(RewardsConfig.class)
+@Import(RewardsConfig.class)//El component scan incluido en la antoación SprongBootApplication,
+//buscará las clases en el mismo paquete y en los subpaquetes desde donde esté la clase anotada con el.
+//Como RewardsConfig.class esta fuera del paquete, tenemos que importar la clase
 public class RewardsApplication {
     private final Logger logger
             = LoggerFactory.getLogger(RewardsApplication.class);

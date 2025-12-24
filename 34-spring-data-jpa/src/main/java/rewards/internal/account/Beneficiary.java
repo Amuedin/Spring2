@@ -26,6 +26,11 @@ public class Beneficiary {
     // No need for @Column, mapped automatically to NAME
 	private String name;
 
+    //Percentage es un value object embedable, o sea sus columnas están en la tabla de la entidad
+    //que lo contiene. Esas columnas estarán definidas por el nombre de sus propiedades. Pero si no queremos
+    //usar el nombre de la propiedad, podemos usar la anotación AttributeOverride, para que mapee el nombre
+    //de la columna del VO(name), a la columna que queramos(column). En este caso, la propiedad value del objeto
+    //Object se guardará en una columna llamada ALLOCATION_PERCENTAGE
 	@AttributeOverride(name="value",column=@Column(name="ALLOCATION_PERCENTAGE"))
 	private Percentage allocationPercentage;
 
